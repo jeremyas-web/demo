@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Almacén</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Sistema de Almacén</h1>
+
+<!-- REGISTRO -->
+<section>
+  <h2>Registrar Producto</h2>
+  <input id="codigo" placeholder="Código">
+  <input id="nombre" placeholder="Nombre">
+  <input id="stock" type="number" placeholder="Stock Inicial">
+  <input id="costo" type="number" placeholder="Costo Unitario">
+  <button onclick="registrarProducto()">Registrar</button>
+</section>
+
+<!-- RECEPCIÓN -->
+<section>
+  <h2>Recepción</h2>
+  <input id="codigoRecepcion" placeholder="Código">
+  <input id="cantidadRecepcion" type="number" placeholder="Cantidad">
+  <input id="costoRecepcion" type="number" placeholder="Costo Unitario">
+  <button onclick="recepcion()">Registrar Recepción</button>
+</section>
+
+<!-- DESPACHO -->
+<section>
+  <h2>Despacho</h2>
+  <input id="codigoDespacho" placeholder="Código">
+  <input id="cantidadDespacho" type="number" placeholder="Cantidad">
+  <button onclick="despacho()">Registrar Despacho</button>
+</section>
+
+<!-- INVENTARIO -->
+<section>
+  <h2>Inventario</h2>
+  <table id="tablaInventario">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Stock</th>
+        <th>Costo Promedio</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- HISTORIAL -->
+<section>
+  <h2>Historial</h2>
+  <table id="tablaHistorial">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Costo Unitario</th>
+        <th>Fecha</th>
+        <th>Stock</th>
+        <th>Costo Promedio</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
