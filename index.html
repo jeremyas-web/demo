@@ -2,14 +2,38 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Módulo 1</title>
+    <title>A la orden</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h2>Módulo 1</h2>
-<p>Este módulo es independiente</p>
-<button onclick="saludar()">Saludar</button>
+<header>
+    <h1>A la orden</h1>
+    <p>Trabajo en equipo - Página modular</p>
+</header>
+
+<nav>
+    <button onclick="mostrarModulo('mod1')">Módulo 1</button>
+    <button onclick="mostrarModulo('mod2')">Módulo 2</button>
+    <button onclick="mostrarModulo('mod3')">Módulo 3</button>
+</nav>
+
+<main>
+    <section id="mod1" class="modulo activo">
+        <h2>Módulo 1</h2>
+        <iframe src="modulo1-index.html"></iframe>
+    </section>
+
+    <section id="mod2" class="modulo">
+        <h2>Módulo 2</h2>
+        <iframe src="modulo2-index.html"></iframe>
+    </section>
+
+    <section id="mod3" class="modulo">
+        <h2>Módulo 3</h2>
+        <iframe src="modulo3-index.html"></iframe>
+    </section>
+</main>
 
 <script src="script.js"></script>
 </body>

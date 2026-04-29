@@ -1,3 +1,9 @@
-function saludar() {
-    alert("Hola desde el módulo 1");
+function mostrarModulo(id) {
+    const modulos = document.querySelectorAll('.modulo');
+
+    modulos.forEach(mod => {
+        mod.classList.remove('activo');
+    });
+
+    document.getElementById(id).classList.add('activo');
 }
