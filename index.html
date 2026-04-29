@@ -2,84 +2,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Inventario CPP</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>A la orden</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-warehouse"></i> Control de Inventario</h1>
-            <p>Método: Costo Promedio Ponderado</p>
-        </header>
 
-        <div class="grid">
-            <section class="card">
-                <h2><i class="fas fa-plus-circle"></i> Registrar Producto</h2>
-                <form id="productForm">
-                    <div class="input-group">
-                        <label>Código</label>
-                        <input type="text" id="code" required placeholder="Ej: PROD01">
-                    </div>
-                    <div class="input-group">
-                        <label>Nombre</label>
-                        <input type="text" id="name" required placeholder="Nombre del producto">
-                    </div>
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label>Stock Inicial</label>
-                            <input type="number" id="initialStock" min="0" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Costo Unitario</label>
-                            <input type="number" id="initialCost" step="0.01" min="0" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-primary">Guardar Producto</button>
-                </form>
-            </section>
+<header>
+    <h1>A la orden</h1>
+    <p>Trabajo en equipo - Página modular</p>
+</header>
 
-            <section class="card">
-                <h2><i class="fas fa-exchange-alt"></i> Movimientos</h2>
-                <div class="input-group">
-                    <label>Seleccionar Producto</label>
-                    <select id="selectProduct"></select>
-                </div>
-                <div class="input-row">
-                    <div class="input-group">
-                        <label>Cantidad</label>
-                        <input type="number" id="moveQty" min="1">
-                    </div>
-                    <div class="input-group">
-                        <label>Costo Unitario (Solo Ingreso)</label>
-                        <input type="number" id="moveCost" step="0.01">
-                    </div>
-                </div>
-                <div class="button-group">
-                    <button onclick="processMovement('in')" class="btn-success">Ingreso / Recepción</button>
-                    <button onclick="processMovement('out')" class="btn-danger">Salida / Despacho</button>
-                </div>
-            </section>
-        </div>
+<nav>
+    <button onclick="mostrarModulo('mod1')">Módulo 1</button>
+    <button onclick="mostrarModulo('mod2')">Módulo 2</button>
+    <button onclick="mostrarModulo('mod3')">Módulo 3</button>
+</nav>
 
-        <section class="card table-container">
-            <h2><i class="fas fa-list"></i> Inventario Actual</h2>
-            <table id="inventoryTable">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Producto</th>
-                        <th>Stock</th>
-                        <th>Costo Unitario (Prom)</th>
-                        <th>Costo Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    </tbody>
-            </table>
-        </section>
-    </div>
-    <script src="script.js"></script>
+<main>
+    <section id="mod1" class="modulo activo">
+        <h2>Módulo 1</h2>
+        <iframe src="modulo1-index.html"></iframe>
+    </section>
+
+    <section id="mod2" class="modulo">
+        <h2>Módulo 2</h2>
+        <iframe src="modulo2-index.html"></iframe>
+    </section>
+
+    <section id="mod3" class="modulo">
+        <h2>Módulo 3</h2>
+        <iframe src="modulo3-index.html"></iframe>
+    </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
